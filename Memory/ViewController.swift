@@ -9,17 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    let symbols = ["😕","📌","😇","😍"]
+    
+    @IBOutlet weak var card1: CardButton!
+    
+   
+    
+    @IBAction func flipCard(_ sender: CardButton) {
+        sender.setTitle(symbols[sender.tag], for: .normal)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
